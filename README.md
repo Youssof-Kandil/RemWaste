@@ -45,7 +45,8 @@ Here are some screenshots of the project
 ![image](https://github.com/user-attachments/assets/a72ba2fa-b808-42d4-9a77-e6423019734b)
 
 
--mobile view
+- mobile view
+
 ![image](https://github.com/user-attachments/assets/79096035-310b-423f-aa94-eb8d103e9eda)
 
 ![image](https://github.com/user-attachments/assets/a107f283-e10d-4502-8aac-cf66ab85a335)
@@ -156,7 +157,7 @@ I then divided the project into 4 different components.
 Decided to go with a context because I wanted to avoid unnecessary refreshes in the UI. It impacts performance and usability. So I made a context that handles selecting the SKIP. It was made purely so that the bottom bar can get the selected skip info without needed to refresh the main home page.
 
 
--
+
 Thanks for the long read.
 -
 
