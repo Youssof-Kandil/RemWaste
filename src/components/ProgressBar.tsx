@@ -25,7 +25,7 @@ export const ProgressBar: React.FC<ProgressStepsProps> = ({ currentStep }) => {
     <>
       {/* Mobile: Top horizontal progress bar */}
       <div className="lg:hidden sticky top-0 z-50 bg-slate-900/90 backdrop-blur-md border-b border-slate-700/50">
-        <div className="container mx-auto  py-4">
+        <div className="container mx-auto py-4">
           <div className="flex  justify-center">
             <div className="flex items-center space-x-2 overflow-x-auto pb-2">
               {steps.map((step, index) => {
@@ -90,11 +90,13 @@ export const ProgressBar: React.FC<ProgressStepsProps> = ({ currentStep }) => {
       </div>
 
       {/* Desktop: Left sidebar progress bar */}
-      <div className="hidden lg:block fixed left-0 top-0 h-full w-64 bg-slate-900/90 backdrop-blur-md border-r border-slate-700/50 z-40">
-        <div className="p-6 h-full flex flex-col">
+      <div className="hidden lg:block fixed left-0 top-0 bottom-0 w-64 overflow-y-auto bg-slate-900/90 backdrop-blur-md border-r border-slate-700/50 z-40">
+        <div className="p-6 flex flex-col">
           <div className="mb-8">
             <h3 className="text-xl font-bold text-white mb-2">Progress</h3>
-            <p className="text-slate-400 text-sm">Track your booking steps</p>
+            <p className="text-slate-400 overflow-y-auto text-sm">
+              Track your booking steps
+            </p>
           </div>
 
           <div className="flex flex-col space-y-6">
