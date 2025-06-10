@@ -17,7 +17,9 @@ export const SelectedSkipProvider = ({ children }: { children: ReactNode }) => {
   const [selectedSkip, setSelectedSkip] = useState<Skip | null>(null);
 
   const onSelectSkip = (newSkip: Skip | null) => {
-    setSelectedSkip(newSkip);
+    if (newSkip?.id == selectedSkip?.id) {
+      setSelectedSkip(null);
+    } else setSelectedSkip(newSkip);
   };
 
   return (

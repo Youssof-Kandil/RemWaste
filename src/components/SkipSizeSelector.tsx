@@ -2,6 +2,7 @@ import React from "react";
 import { SkipCard } from "./SkipCard";
 import { useSkipsByLocation } from "../hooks/useSkipsByLocation";
 import { useSelectedSkip } from "../context/SelectedSkip";
+import { BottomBar } from "./Bottombar";
 
 export const SkipSizeSelector: React.FC = ({}) => {
   const {
@@ -11,6 +12,7 @@ export const SkipSizeSelector: React.FC = ({}) => {
   } = useSkipsByLocation("NR32", "Lowestoft");
 
   const { selectedSkip, onSelectSkip } = useSelectedSkip();
+
   if (isLoading) return <div>Loading skips...</div>;
 
   if (error) return <div>Error: {error.message}</div>;
@@ -40,13 +42,7 @@ export const SkipSizeSelector: React.FC = ({}) => {
       </div>
 
       {/* Selection info */}
-      {selectedSkip?.id && (
-        <div className="text-center p-6 rounded-2xl bg-slate-800/50 backdrop-blur-sm border border-slate-700/50">
-          <p className="text-slate-300">
-            Skip selected! Ready to proceed to the next step.
-          </p>
-        </div>
-      )}
+      <BottomBar />
     </div>
   );
 };
