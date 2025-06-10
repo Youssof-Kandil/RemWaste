@@ -6,7 +6,11 @@ interface skipProps {
   isSelected: boolean;
   onSelect: () => void;
 }
-export default function SkipCard({ skip, isSelected, onSelect }: skipProps) {
+export const SkipCard: React.FC<skipProps> = ({
+  skip,
+  isSelected,
+  onSelect,
+}) => {
   const totalPrice =
     skip.priceBeforeVat + (skip.priceBeforeVat * skip.vat) / 100;
 
@@ -55,7 +59,6 @@ export default function SkipCard({ skip, isSelected, onSelect }: skipProps) {
 
         {/* Content section */}
         <div className="p-6 space-y-4">
-            
           {/* Features */}
           <div className="space-y-3">
             <div className="flex items-center gap-3">
@@ -132,4 +135,4 @@ export default function SkipCard({ skip, isSelected, onSelect }: skipProps) {
       </div>
     </div>
   );
-}
+};
