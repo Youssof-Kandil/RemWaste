@@ -12,8 +12,8 @@ export const SkipCard: React.FC<skipProps> = ({
   onSelect,
 }) => {
   const totalPrice =
-    skip.priceBeforeVat + (skip.priceBeforeVat * skip.vat) / 100;
-
+    skip.price_before_vat + (skip.price_before_vat * skip.vat) / 100;
+  console.log(skip);
   return (
     <div
       className={`
@@ -41,7 +41,7 @@ export const SkipCard: React.FC<skipProps> = ({
         </div>
       )}
 
-      <div className="p-6 pt-0 relative z-10">
+      <div className=" pt-0 relative z-10">
         {/* Header section with size */}
         <div className="relative bg-gradient-to-r from-slate-700 to-slate-800 p-6 text-center">
           <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-cyan-400 to-blue-500 mb-4 shadow-lg">
@@ -53,7 +53,7 @@ export const SkipCard: React.FC<skipProps> = ({
             {skip.size} Yard Skip
           </h3>
           <p className="text-slate-300 text-sm">
-            {skip.hirePeriodDays} Day Hire Period
+            {skip.hire_period_days} Day Hire Period
           </p>
         </div>
 
@@ -64,7 +64,7 @@ export const SkipCard: React.FC<skipProps> = ({
             <div className="flex items-center gap-3">
               <Clock className="w-4 h-4 text-cyan-400" />
               <span className="text-slate-300 text-sm">
-                {skip.hirePeriodDays} days included
+                {skip.hire_period_days} days included
               </span>
             </div>
 
@@ -75,7 +75,7 @@ export const SkipCard: React.FC<skipProps> = ({
               </span>
             </div>
 
-            {skip.allowsHeavyWaste && (
+            {skip.allows_heavy_waste && (
               <div className="flex items-center gap-3">
                 <CheckCircle className="w-4 h-4 text-emerald-400" />
                 <span className="text-slate-300 text-sm">
@@ -86,7 +86,7 @@ export const SkipCard: React.FC<skipProps> = ({
           </div>
 
           {/* Road restriction warning */}
-          {!skip.allowedOnRoad && (
+          {!skip.allowed_on_road && (
             <div className="flex items-center gap-2 p-3 rounded-lg bg-amber-500/10 border border-amber-500/20">
               <AlertTriangle className="w-4 h-4 text-amber-400 flex-shrink-0" />
               <span className="text-amber-300 text-sm">
@@ -101,8 +101,8 @@ export const SkipCard: React.FC<skipProps> = ({
               £{totalPrice.toFixed(0)}
             </div>
             <div className="text-sm text-slate-400">
-              Inc. VAT (£{skip.priceBeforeVat} + £
-              {((skip.priceBeforeVat * skip.vat) / 100).toFixed(0)} VAT)
+              Inc. VAT (£{skip.price_before_vat} + £
+              {((skip.price_before_vat * skip.vat) / 100).toFixed(0)} VAT)
             </div>
           </div>
 

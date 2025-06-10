@@ -1,9 +1,9 @@
 export interface Skip {
   id: number;
   size: number;
-  hirePeriodDays: number;
-  priceBeforeVat: number;
+  hire_period_days: number;
+  price_before_vat: number;
   vat: number;
-  allowedOnRoad: boolean;
-  allowsHeavyWaste: boolean;
+  allowed_on_road: boolean;
+  allows_heavy_waste: boolean;
 }
