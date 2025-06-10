@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/dcb75952-cf52-44ca-b47c-c3709c14af3b)# RemWaste Live Page Rework
+# RemWaste Live Page Rework
 
 
 
